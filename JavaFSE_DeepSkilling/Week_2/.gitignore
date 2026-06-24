@@ -1,0 +1,27 @@
+# Compiled class files
+*.class
+
+# Packaged Artifacts (Spring Boot binaries)
+*.jar
+*.war
+*.ear
+
+# Log files
+*.log
+
+# Build directories
+target/
+build/
+bin/
+
+# IDE-specific files
+.settings/
+.project
+.classpath
+.factorypath
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
