@@ -1,0 +1,30 @@
+package com.cognizant.springlearn;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+@SpringBootApplication
+public class SpringLearnApplication {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(SpringLearnApplication.class);
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringLearnApplication.class, args);
+        displayCountry();
+    }
+
+    public static void displayCountry() {
+        // 1. Initialize the IoC container using the XML file
+        ApplicationContext context = new ClassPathXmlApplicationContext("country.xml");
+        
+        // 2. Request the bean from the container
+        Country country = context.getBean("country", Country.class);
+        
+        // 3. Display it
+        LOGGER.debug("Country : {}", country.toString());
+    }
+}
