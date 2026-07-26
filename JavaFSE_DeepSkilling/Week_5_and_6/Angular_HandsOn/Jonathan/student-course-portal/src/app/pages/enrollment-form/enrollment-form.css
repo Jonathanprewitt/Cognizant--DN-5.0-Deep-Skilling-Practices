@@ -1,0 +1,13 @@
+/* Apply red border to invalid fields that the user has touched */
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border: 2px solid red;
+    outline: none;
+}
+
+/* Apply green border to valid fields that the user has touched */
+input.ng-valid.ng-touched,
+select.ng-valid.ng-touched {
+    border: 2px solid green;
+    outline: none;
+}

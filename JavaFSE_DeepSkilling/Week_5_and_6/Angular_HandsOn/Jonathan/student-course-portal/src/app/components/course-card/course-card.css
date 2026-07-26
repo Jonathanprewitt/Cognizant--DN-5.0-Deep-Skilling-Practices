@@ -1,0 +1,22 @@
+/* Step 29: Styles for enrolled and full credit courses */
+:host {
+    display: block;
+}
+
+.card--enrolled {
+    background-color: #f0f8ff;
+    /* Light Alice Blue background */
+    box-shadow: inset 0 0 0 2px #0056b3;
+    /* Inner border to highlight */
+}
+
+.card--full {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow to stand out */
+}
+
+/* Step 31: Style to increase card height */
+.expanded {
+    min-height: 200px;
+    transition: min-height 0.3s ease-in-out;
+}

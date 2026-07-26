@@ -1,0 +1,25 @@
+<div [ngClass]="cardClasses" [ngStyle]="{ 'border-left': '6px solid ' + statusBorderColor }"
+    style="border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 5px;">
+
+    <h3>{{ course.name }} ({{ course.code }})</h3>
+
+    <!-- The custom pipe applied directly to the credits -->
+    <p>{{ course.credits | creditLabel }}</p>
+
+    <div [ngSwitch]="course.gradeStatus" style="margin-bottom: 10px; font-weight: bold;">
+        <span *ngSwitchCase="'passed'" style="color: green;">Passed</span>
+        <span *ngSwitchCase="'failed'" style="color: red;">Failed</span>
+        <span *ngSwitchCase="'pending'" style="color: grey;">Pending</span>
+    </div>
+
+    <button (click)="toggleDetails()">Show Details</button>
+
+    <!-- Updated Enroll Button powered by NgRx state -->
+    <button (click)="onEnrollClick()" style="margin-left: 10px;">
+        {{ (enrolledIds$ | async)?.includes(course.id) ? 'Unenroll' : 'Enroll' }}
+    </button>
+
+    <div *ngIf="isExpanded" style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #ccc;">
+        <p><em>Additional course details and syllabus information will appear here.</em></p>
+    </div>
+</div>

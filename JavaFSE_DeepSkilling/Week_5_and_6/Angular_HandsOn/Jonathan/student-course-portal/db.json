@@ -1,0 +1,63 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "name": "Introduction to Angular",
+      "code": "CS-101",
+      "description": "Mastering the fundamentals of single-page applications.",
+      "credits": 3
+    },
+    {
+      "id": "2",
+      "name": "Advanced Communication Technology",
+      "code": "ECE-401",
+      "description": "Core electronics and communication engineering concepts, signal processing, and advanced transmission.",
+      "credits": 4
+    },
+    {
+      "id": "3",
+      "name": "Embedded Systems & IoT",
+      "code": "ECE-402",
+      "description": "Practical implementation, sensor interfacing, and hardware-software integration.",
+      "credits": 4
+    }
+  ],
+  "students": [],
+  "enrollments": [
+    {
+      "studentName": "Jonathan Prewitt",
+      "studentEmail": "jonathan2005@gmail.com",
+      "courseId": "ECA-707",
+      "preferredSemester": "Even",
+      "agreeToTerms": true,
+      "additionalCourses": [
+        "Professional Communication"
+      ],
+      "id": "3N07T0PoKdg"
+    },
+    {
+      "studentName": "Aadithya",
+      "studentEmail": "jonathan2005@gmail.com",
+      "courseId": "ECA-707",
+      "preferredSemester": "Even",
+      "agreeToTerms": true,
+      "additionalCourses": [
+        "Data communication network",
+        "ECA-777"
+      ],
+      "id": "B7jPmQAWifY"
+    },
+    {
+      "studentName": "Jonathan Wilfred",
+      "studentEmail": "jonathan123@yahoo.com",
+      "courseId": "ECA-777",
+      "preferredSemester": "Even",
+      "agreeToTerms": true,
+      "additionalCourses": [
+        "Principles of management"
+      ],
+      "id": "BguSMf5vivA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

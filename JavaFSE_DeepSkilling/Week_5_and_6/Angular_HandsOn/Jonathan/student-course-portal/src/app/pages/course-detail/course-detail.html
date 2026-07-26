@@ -1,0 +1,14 @@
+<div *ngIf="course" class="detail-container">
+    <h2>{{ course.name }}</h2>
+    <hr>
+    <p><strong>Course ID:</strong> {{ course.id }}</p>
+    <!-- You can add more interpolations here based on your model (e.g., description, instructor) -->
+
+    <button routerLink="/courses">Back to Catalog</button>
+</div>
+
+<!-- Fallback if a user types an ID that doesn't exist -->
+<div *ngIf="!course">
+    <h2>Course not found.</h2>
+    <button routerLink="/courses">Back to Catalog</button>
+</div>
